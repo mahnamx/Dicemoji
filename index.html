@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMP2132 Final Project</title>
+    <script src="./js/jquery-3.6.0.min.js" defer="defer"></script>
+    <script src="./js/script.js" defer="defer"></script>
+    <script
+      src="https://kit.fontawesome.com/7d578d6dba.js"
+      crossorigin="anonymous"
+      defer="defer"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/dice-fav.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div>
+          <img src="images/c0.png" id="headerpc" alt="emoji" />
+          <h4><span>Computer</span> : <span id="pcTotalScore">0</span></h4>
+        </div>
+        <div>
+          <h3 class="as1">Dicemoji</h3>
+          <div class="dice">
+            <div class="face first-face">
+              <div class="dot"></div>
+            </div>
+
+            <div class="face second-face">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="face third-face">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="face fourth-face">
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="face fifth-face">
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="column">
+                <div class="dot"></div>
+              </div>
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="face sixth-face">
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="column">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4>
+            <span id="targetName0">Your Name</span> :
+            <span id="youTotalScore">0</span>
+          </h4>
+          <img src="images/p0.png" id="headeruser" alt="emoji" />
+        </div>
+      </header>
+
+      <div class="buttons">
+        <div><button id="roll"></button></div>
+        <div><button id="newg">New Game</button></div>
+      </div>
+
+      <div id="popup">
+        <h4 id="popupText"></h4>
+        <img id="popupIMG" src="images/cry.gif" alt="cry" />
+        <button id="close">Close</button>
+      </div>
+
+      <section id="sec2">
+        <article>
+          <div id="computer">
+            <div class="diceImages">
+              <img id="computerDice1" src="./images/" alt="" />
+              <img id="computerDice2" src="./images/" alt="" />
+            </div>
+          </div>
+        </article>
+        <article></article>
+        <article>
+          <div id="you">
+            <div class="diceImages">
+              <img id="youDice1" src="./images/" alt="" />
+              <img id="youDice2" src="./images/" alt="" />
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="sec4">
+        <article class="roundScore">
+          <p><strong>Round 1 Results:</strong></p>
+          <p>Computer: <span id="computerR1Results"></span></p>
+          <p><span id="targetName"></span><span id="youR1Results"></span></p>
+        </article>
+        <article class="roundScore">
+          <p><strong>Round 2 Results:</strong></p>
+          <p>Computer: <span id="computerR2Results"></span></p>
+          <p><span id="targetName2"></span><span id="youR2Results"></span></p>
+        </article>
+        <article class="roundScore">
+          <p><strong>Round 3 Results:</strong></p>
+          <p>Computer: <span id="computerR3Results"></span></p>
+          <p><span id="targetName3"></span><span id="youR3Results"></span></p>
+        </article>
+      </section>
+      <div class="instruction">
+        <details id="details1">
+          <summary>
+            <h3>How to Play</h3>
+            <span>[show]</span>
+          </summary>
+          <ul>
+            <li>To start, click the Roll the Dice button.</li>
+            <li>
+              To advance to the next round, click the 'Roll the Dice' button
+              again.
+            </li>
+            <li>
+              After three rounds, the game is over and the final score is
+              calculated.
+            </li>
+            <li>
+              If you want to play again, click the 'New Game' button or refresh
+              the page.
+            </li>
+          </ul>
+        </details>
+        <details id="details2">
+          <summary>
+            <h3>Rules</h3>
+            <span>[show]</span>
+          </summary>
+          <ul>
+            <li>Each round, you and the computer both roll a pair of dice.</li>
+            <li>
+              Your score for that round will be based on the sum of the dice.
+            </li>
+            <li>
+              If you roll doubles (e.g. a 5 and a 5) then your score is
+              multiplied by 2.
+            </li>
+            <li>Rolling a 1 will give you a score of 0 for that round.</li>
+            <li>
+              The player who has the most points at the end of three rounds is
+              the winner.
+            </li>
+          </ul>
+        </details>
+      </div>
+      <footer>
+        <div id="social">
+          <a
+            class="fab fa-github-square social-link fa-icon"
+            href="https://github.com/mahnamx"
+            target="_blank"
+          ></a>
+          <a
+            class="fab fa-linkedin social-link fa-icon"
+            href="https://www.linkedin.com/in/mahnam-najafian-a3949818b/"
+            target="_blank"
+          ></a>
+          <a
+            class="fab fa-instagram-square social-link fa-icon"
+            href="https://www.instagram.com/Mahnamx/"
+            target="_blank"
+          ></a>
+          <a
+            class="fab fa-facebook-square social-link fa-icon"
+            href="https://www.facebook.com/MahnamNaj"
+            target="_blank"
+          ></a>
+        </div>
+        <!-- Copyright / Author -->
+        <p>
+          <span class="fas fa-dice fa-icon"></span>
+          &nbsp; &copy; COMP2132 Final Project by Mahnam Najafianrazavi , July
+          2022 &nbsp;
+          <span class="fas fa-dice fa-icon"></span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
